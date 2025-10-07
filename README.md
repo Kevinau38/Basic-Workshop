@@ -1,2 +1,2 @@
-# Basic-Workshop
+# Basic-Workshop for AWS Services
 
