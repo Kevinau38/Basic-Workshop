@@ -1,5 +1,5 @@
 # Getting Started with EC2 Workshop
-chào bạn
+
 ## Hướng dẫn sử dụng
 
 ### Yêu cầu
