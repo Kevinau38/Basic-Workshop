@@ -29,21 +29,12 @@
 
 Workshop này hướng dẫn các bước cơ bản để làm việc với Amazon EC2:
 
-1. **Lưu ý** - Các điều cần biết trước khi bắt đầu
-2. **Create Security Group** - Tạo nhóm bảo mật
-3. **Create EC2** - Tạo EC2 instance
-4. **Connect to EC2 via SSH** - Kết nối qua SSH
-5. **Connect to EC2 via Console** - Kết nối qua AWS Console
-6. **Access HTTP** - Truy cập web server trên EC2
-7. **Create and Assign IAM Role** - Tạo và gán IAM role
-8. **Cleanup** - Dọn dẹp tài nguyên
+1. **Giới thiệu** - Tổng quan về Amazon EC2.
+2. **Chuẩn bị** - Tạo EC2 instance và IAM role.
+3. **Kết nối đến EC2 instance** - Kết nối qua SSH, AWS Console và truy cập HTTP.
+4. **Cấu hình EC2 IAM role** - Gán IAM role để truy cập S3.
+5. **Dọn dẹp tài nguyên** - Xóa các tài nguyên đã tạo.
 
 ### Dừng server
 
 Nhấn `Ctrl+C` trong PowerShell để dừng Hugo server.
-
-### Chỉnh sửa nội dung
-
-- Nội dung workshop nằm trong thư mục `content/`
-- Hình ảnh nằm trong thư mục `static/images/`
-- Cấu hình trong file `config.toml`
