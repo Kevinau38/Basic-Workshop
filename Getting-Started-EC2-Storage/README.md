@@ -27,13 +27,14 @@
 
 ### Nội dung workshop
 
-Workshop này hướng dẫn các bước cơ bản để làm việc với Amazon EC2:
+Workshop này hướng dẫn các bước cơ bản để làm việc với Amazon EC2 Storage:
 
-1. **Giới thiệu** - Tổng quan về Amazon EC2.
-2. **Chuẩn bị** - Tạo Security Group, EC2 instance và IAM role.
-3. **Kết nối đến EC2 instance** - Kết nối qua SSH, AWS Console và truy cập HTTP.
-4. **Cấu hình EC2 IAM role** - Gán IAM role để truy cập S3.
-5. **Dọn dẹp tài nguyên** - Xóa các tài nguyên đã tạo.
+1. **Giới thiệu** - Tổng quan về Amazon EC2 Storage.
+2. **Chuẩn bị** - Tạo Security Group, EC2 instance, EBS Snapshot và AMI.
+3. **Kết nối đến EC2 instance** - Connect qua EC2 Instance Connect, kiểm tra web server và tạo file.
+4. **Khôi phục EC2 từ AMI** - Khôi phục EC2 instance từ AMI đã tạo.
+5. **Kiểm tra webserver và file đã tạo** - Xác minh dữ liệu đã được bảo toàn trong AMI.
+6. **Dọn dẹp tài nguyên** - Xóa các tài nguyên đã tạo.
 
 ### Dừng server
 
