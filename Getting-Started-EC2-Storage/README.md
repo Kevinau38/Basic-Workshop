@@ -1,4 +1,4 @@
-# Getting Started with EC2 Workshop
+# Getting Started with EC2 Storage Workshop
 
 ## Hướng dẫn sử dụng
 
@@ -12,7 +12,7 @@
 
 2. **Di chuyển đến thư mục chứa workshop:**
    ```cmd
-   cd Getting-Started-EC2
+   cd Getting-Started-EC2-Storage
    ```
 
 3. **Chạy Hugo server:**
