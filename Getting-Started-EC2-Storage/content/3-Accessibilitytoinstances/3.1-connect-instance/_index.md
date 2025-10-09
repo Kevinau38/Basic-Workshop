@@ -1,5 +1,5 @@
 ---
-title: "Connect via SSH"
+title: "Connect via EC2 Instance Connect"
 
 weight: 1
 chapter: false

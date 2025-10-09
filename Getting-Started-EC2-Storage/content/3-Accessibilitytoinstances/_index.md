@@ -6,10 +6,10 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-In this step, we will access our EC2 instance through different approaches - connecting via **SSH**, accessing through **The Console**, and testing web connectivity by navigating to **http://{EC2 public IP}**.
+In this step, we will connect to our EC2 instance via EC2 Instance Connect, verify that the web server is running, and create some files. This will help us test the data persistence when we restore from AMI later.
 
 ### Content
 
-3.1. [Connect via SSH](3.1-SSH/) \
-3.2. [Connect via Console](3.2-Console/) \
-3.3. [Access HTTP on EC2](3.3-access-http/)
+3.1. [Connect via EC2 Instance Connect](3.1-connect-instance/) \
+3.2. [Verify web server](3.2-verify-webserver/) \
+3.3. [Create test files](3.3-create-files/)
