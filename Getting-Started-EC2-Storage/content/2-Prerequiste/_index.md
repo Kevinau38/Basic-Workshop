@@ -16,9 +16,10 @@ pre: " <b> 2. </b> "
 
 
 
-In order to securely manage our EC2 instances on AWS, especially within a VPC architecture, we need to configure appropriate permissions and networking settings. As part of the preparation, we will create an IAM Role to grant the necessary permissions for EC2 instances to interact with other AWS services such as Amazon S3 and Amazon VPC.
+In this preparation phase, we will set up the foundational components needed for our EC2 Storage workshop. We'll create a Security Group for network access, launch an EC2 instance with a web server, and then create storage-related resources including EBS snapshots and an Amazon Machine Image (AMI) for backup and recovery scenarios.
 
 ### Content
 
 - [Prepare EC2](2.1-createec2/)
-- [Create IAM Role](2.2-createiamrole/)
+- [Create EBS Snapshot](2.2-create-ebs-snapshot/)
+- [Create AMI](2.3-create-ami/)
