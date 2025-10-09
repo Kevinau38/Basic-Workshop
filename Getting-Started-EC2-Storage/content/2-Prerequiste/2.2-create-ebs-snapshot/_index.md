@@ -1,15 +1,14 @@
 ---
-title: "Create IAM Role"
+title: "Create EBS Snapshot"
 
 weight: 2
 chapter: false
 pre: " <b> 2.2 </b> "
 ---
 
-### Create IAM Role
+### Create EBS Snapshot
 
-In this step, we will proceed to create IAM Role **EC2S3FullAccessRole**. In this IAM Role, the policy **AmazonS3FullAccess**
-will be assigned, which allows the EC2 server to have full access to S3 services.
+In this step, we will create an EBS snapshot of our EC2 instance's root volume. EBS snapshots are point-in-time backups of your EBS volumes that are stored in Amazon S3. These snapshots can be used to create new volumes or restore data.
 
 1. Go to [IAM service administration interface](https://console.aws.amazon.com/iamv2/)
 2. In the left navigation bar, click **Roles**.

@@ -6,6 +6,13 @@ chapter: false
 pre: " <b> 2.1.2 </b> "
 ---
 
+{{% notice info %}}
+
+• **Key pair (login) section**: In the previous lab – Getting Started with EC2, we created a key pair – we will reuse that key to continue with the next steps.  
+• **Subnet in the Network settings section**: We can also reuse the previously created subnet.    
+{{% /notice %}}
+
+
 #### Create EC2 **Lab EC2**
 
 1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
