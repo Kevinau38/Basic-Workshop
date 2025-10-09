@@ -10,38 +10,32 @@ pre: " <b> 2.2 </b> "
 
 In this step, we will create an EBS snapshot of our EC2 instance's root volume. EBS snapshots are point-in-time backups of your EBS volumes that are stored in Amazon S3. These snapshots can be used to create new volumes or restore data.
 
-1. Go to [IAM service administration interface](https://console.aws.amazon.com/iamv2/)
-2. In the left navigation bar, click **Roles**.
+1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
 
-![role](/images/2.prerequisite/023-iamrole.png)
+2. In the left navigation bar, click **Volumes**.
 
-3. Click **Create role**.
+![role](/images/2.prerequisite/023-createebsvolumes.png)
 
-![role1](/images/2.prerequisite/024-iamrole.png)
-4. At the **Create role** page:
-- In the **Select trusted entity** section:
-   - In the **Trusted entity type** field, click **AWS service**.
-   - In the **Use case** field, click **EC2**.
-- Click **Next**.
+3. Select the volume of the created instance, right-click and select **Create snapshot**.
 
-![role1](/images/2.prerequisite/025-iamrole.png)
+![role1](/images/2.prerequisite/024-createebsvolumes.png)
 
-5. In the Search box, enter **AmazonS3FullAccess** and press Enter to search for this policy.
+4. At the **Create snapshot** page:
+- In the **Snapshot details** section:
+   - In the **Description** field, enter **Snapshot for bastion host volume**.
+- In the **Tags** section:
+   - In the **Key** field, enter **Name**.
+   - In the **Value - optional** field, enter **Lab EBS Snapshot**.
+- Click **Create snapshot**.
 
-- Click the policy **AmazonS3FullAccess**.
-- Click **Next**
+![role1](/images/2.prerequisite/025-createebsvolumes.png)
 
-![createpolicy](/images/2.prerequisite/026-iamrole.png)
+5. From the left menu in EC2 console, click **Snapshots** to verify that the snapshot has been created.
 
-6. In the **Name, review, and create** section:
-- In the **Role name** field, enter **EC2S3FullAccessRole**.
-- Click **Create Role** \.
+![createpolicy](/images/2.prerequisite/026-createebsvolumes.png)
 
-![namerole](/images/2.prerequisite/027-iamrole.png)
+6. Wait for a moment and you will see the Snapshot status change to **Completed**, indicating success.
 
-7. After successfully creating the role, you will see the **EC2S3FullAccessRole** listed in the IAM Roles dashboard,
-confirming that the role has been created and is ready to be attached to EC2 instances.
+![namerole](/images/2.prerequisite/027-createebsvolumes.png)
 
-![namerole](/images/2.prerequisite/028-iamrole.png)
-
-Next, we will connect to the **EC2 instance** we created via **SSH**.
+Next, we will proceed to **create AMI**.

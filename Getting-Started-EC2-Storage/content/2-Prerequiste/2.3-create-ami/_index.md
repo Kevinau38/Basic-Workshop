@@ -1,12 +1,12 @@
 ---
-title: "Create IAM Role"
+title: "Create AMI"
 
-weight: 2
+weight: 3
 chapter: false
-pre: " <b> 2.2 </b> "
+pre: " <b> 2.3 </b> "
 ---
 
-### Create IAM Role
+### Create AMI
 
 In this step, we will proceed to create IAM Role **EC2S3FullAccessRole**. In this IAM Role, the policy **AmazonS3FullAccess**
 will be assigned, which allows the EC2 server to have full access to S3 services.
