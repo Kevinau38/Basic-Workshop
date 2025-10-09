@@ -28,3 +28,9 @@ pre: " <b> 4. </b> "
 ![role1](/images/4.restore-ec2-ami/003-s3.png)
 
 ![role1](/images/4.restore-ec2-ami/004-s3.png)
+
+5. Wait for the new instance to be in **Running** state.
+
+![role1](/images/4.restore-ec2-ami/005-s3.png)
+
+Next, we will proceed to **verify webserver and created file** to confirm data persistence.
