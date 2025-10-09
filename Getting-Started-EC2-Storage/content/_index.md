@@ -1,15 +1,15 @@
 ---
-title: "EC2 Storage"
+title: "Elastic Compute Cloud"
 
 weight: 1
 chapter: false
 ---
 
-# Getting Started with Amazon EC2
+# Getting Started with Amazon EC2 Storage
 
 ### Overall
 
-In this lab, you'll learn the basics and practice of Amazon EC2 Storage. Perform creating EC2 instances, EBS snapshots, AMI creation, and restoring instances from AMI.
+In this lab, you'll learn the basics and practice of Amazon EC2. Perform creating EC2 instances, connecting via SSH, and assigning IAM roles to access S3.
 
 ![ConnectPrivate](/images/arc-log.png)
 
@@ -18,6 +18,5 @@ In this lab, you'll learn the basics and practice of Amazon EC2 Storage. Perform
 1.  [Introduction ](1-introduce/)
 2.  [Preparation](2-prerequiste/)
 3.  [Connect to EC2 instance](3-accessibilitytoinstances/)
-4.  [Restore EC2 from AMI](4-restore-ec2-ami/)
-5.  [Verify webserver and created file](5-verify-data/)
-6.  [Clean up resources](6-cleanup/)
+4.  [Configure EC2 IAM role](4-configure-IAM-role/)
+5.  [Clean up resources](6-cleanup/)
