@@ -23,8 +23,7 @@ pre: " <b> 4. </b> "
 
 3. Kiểm tra kết nối IAM role
 
-- Kết nối đến EC2 instance sử dụng EC2 Instance Connect ([Phần 3.2: Kết nối qua Console]({{< ref "3-Accessibilitytoinstances/3.2-Console" >}})).
-- Chạy lệnh sau để kiểm tra quyền truy cập S3:
+
 
 ```
   aws s3 ls

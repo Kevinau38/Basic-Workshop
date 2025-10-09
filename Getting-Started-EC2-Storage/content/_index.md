@@ -19,5 +19,4 @@ In this lab, you'll learn the basics and practice of Amazon EC2 Storage. Perform
 2.  [Preparation](2-prerequiste/)
 3.  [Connect to EC2 instance](3-accessibilitytoinstances/)
 4.  [Restore EC2 from AMI](4-restore-ec2-ami/)
-5.  [Verify webserver and created file](5-verify-data/)
-6.  [Clean up resources](6-cleanup/)
+5.  [Clean up resources](5-cleanup/)

@@ -1,24 +1,23 @@
 ---
-title: "Access HTTP on EC2"
+title: "Create test files"
 
 weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home).
+1. Run the following command to create a test file:
 
-- At the **Instances** page:
-- Click **Lab EC2 - we create on the previous Lab**.
-- Then click  **Copy our Public IPv4 address**
+```
+touch test.txt
+```
 
-![Connect](/images/3.connect/006-connect.png)
+2. Run the following command to verify the file has been created:
 
-2. Access **http://{public ip}** in your web browser **(note: use http, not https)**.
+```
+ls
+```
 
 ![Connect](/images/3.connect/007-connect.png)
 
-![Connect](/images/3.connect/008-connect.png)
-
-3. We've covered **3 ways** to connect to **EC2**: **SSH**, **Console**, and **http://{EC2 public IP}**. Next, we'll attach role
-**EC2S3FullAccessRole** to **EC2**.
+Next, we will proceed to **restore EC2 from AMI** to test data persistence.

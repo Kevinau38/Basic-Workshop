@@ -14,5 +14,6 @@ The architecture overview after you complete this step will be as follows:
 
 ### Content
 
-- [Create security group](2.1.1-createsecgroup/)
-- [Create EC2](2.1.2-createec2/)
+2.1. [Prepare EC2](2.1-createec2/) \
+2.2. [Create EBS Snapshot](../2.2-create-ebs-snapshot/) \
+2.3. [Create AMI](../2.3-create-ami/)
