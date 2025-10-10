@@ -14,20 +14,26 @@ In this step, we will connect to the **new EC2 instance restored from AMI** and 
 
 ![role1](/images/5.verify/002-verify.png)
 
-2. Run the following command to verify the web server is running:
-
-```
-curl localhost
-```
-
-If the result returns "Hello world from ip xxxxxx", it means the web server is working correctly.
-
-3. Run the following command to check if our test file still exists:
+2. After connecting, run the following command to verify that the file still exists:
 
 ```
 ls
 ```
 
-You should see the `test.txt` file that we created earlier, confirming that data persistence works with AMI restoration.
+You should see the `test.txt` file that we created earlier.
 
-Next, we will proceed to **clean up resources**.
+![role1](/images/5.verify/003-verify.png)
+
+3. Next, access the web server from your browser using the public IP address:
+
+```
+http://{public-ip}
+```
+
+![role1](/images/5.verify/004-verify.png)
+
+4. Verify that the web server is still running and displaying the expected content.
+
+![role1](/images/5.verify/005-verify.png)
+
+We have successfully completed the verification. Next is the essential step of **Clean up resources**.

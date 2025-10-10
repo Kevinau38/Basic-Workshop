@@ -16,6 +16,10 @@ We will take the following steps to delete the resources we created in this exer
    - Click **Instance state**.
    - Click **Terminate instance**, then click **Terminate** to confirm.
 
+![clean](/images/6.clean/001-clean.png)
+
+![clean](/images/6.clean/002-clean.png)
+
 #### Delete AMI and Snapshots
 
 1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
@@ -26,6 +30,10 @@ We will take the following steps to delete the resources we created in this exer
    - Select the snapshots we created.
    - Click **Actions** → **Delete snapshot**.
 
+![clean](/images/6.clean/003-clean.png)
+
+![clean](/images/6.clean/004-clean.png)
+
 #### Delete Security Group
 
 1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
@@ -33,3 +41,7 @@ We will take the following steps to delete the resources we created in this exer
    - Select the security group we created.
    - Click **Actions**.
    - Click **Delete security groups**, then click **Delete** to confirm.
+
+![clean](/images/6.clean/005-clean.png)
+
+![clean](/images/6.clean/006-clean.png)

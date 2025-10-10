@@ -6,6 +6,11 @@ chapter: false
 pre: " <b> 2.2 </b> "
 ---
 
+{{% notice info %}}
+
+Complete section [3. Connect to EC2 instance]({{< ref "3-accessibilitytoinstances" >}}) first, then return to complete the remaining sections **2.2** and **2.3** of the preparation phase.
+{{% /notice %}}
+
 ### Create EBS Snapshot
 
 In this step, we will create an EBS snapshot of our EC2 instance's root volume. EBS snapshots are point-in-time backups of your EBS volumes that are stored in Amazon S3. These snapshots can be used to create new volumes or restore data.
