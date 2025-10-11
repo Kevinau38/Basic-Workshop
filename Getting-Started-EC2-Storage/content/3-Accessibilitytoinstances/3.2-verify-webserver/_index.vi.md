@@ -1,29 +1,19 @@
 ---
-title: "Kết nối qua Console"
+title: "Xác minh web server"
 
 weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-1. Truy cập [giao diện quản trị dịch vụ EC2](https://console.aws.amazon.com/ec2/v2/home).
+1. Chạy lệnh sau để xác minh server đang chạy:
 
-- Tại trang **Instances**:
-- Click **Lab EC2 - chúng ta tạo ở Lab trước**.
-- Sau đó click **Connect**
+```
+curl localhost
+```
 
-![KếtNối](/images/3.connect/001-connect.png)
+Nếu kết quả trả về "Hello world from ip xxxxxx", có nghĩa là việc xác minh đã thành công.
 
-2. Tại trang **Connect to instance**:
+![Connect](/images/3.connect/006-connect.png)
 
-• Click tab **EC2 Instance Connect**.
-
-• Click **Connect** để mở terminal dựa trên trình duyệt.
-
-• Bạn sẽ được kết nối trực tiếp đến EC2 instance thông qua web console mà không cần lệnh SSH hoặc key files.
-
-![KếtNối](/images/3.connect/004-connect.png)
-
-3. Chúng ta đã kết nối thành công đến EC2 instance chạy Amazon Linux 2023.
-
-![KếtNối](/images/3.connect/005-connect.png)
+Tiếp theo, chúng ta sẽ tiến hành **tạo test files** để xác minh tính bền vững của dữ liệu.

@@ -14,5 +14,6 @@ Tổng quan kiến trúc sau khi bạn hoàn thành bước này sẽ như sau:
 
 ### Nội dung
 
-- [Tạo security group](2.1.1-createsecgroup/)
-- [Tạo EC2](2.1.2-createec2/)
+2.1. [Chuẩn bị EC2](2.1-createec2/) \
+2.2. [Tạo EBS Snapshot](../2.2-create-ebs-snapshot/) \
+2.3. [Tạo AMI](../2.3-create-ami/)

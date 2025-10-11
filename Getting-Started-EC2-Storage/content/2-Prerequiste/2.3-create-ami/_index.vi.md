@@ -1,48 +1,47 @@
 ---
-title: "Tạo IAM Role"
+title: "Tạo AMI"
 
-weight: 2
+weight: 3
 chapter: false
-pre: " <b> 2.2 </b> "
+pre: " <b> 2.3 </b> "
 ---
 
-### Tạo IAM Role
+### Tạo AMI
 
-Trong bước này, chúng ta sẽ tiến hành tạo IAM Role **EC2S3FullAccessRole**. Trong IAM Role này, policy **AmazonS3FullAccess**
-sẽ được gán, cho phép EC2 server có quyền truy cập đầy đủ vào các dịch vụ S3.
+Trong bước này, chúng ta sẽ tạo một Amazon Machine Image (AMI) từ EC2 instance của chúng ta. AMI là một template chứa cấu hình phần mềm (hệ điều hành, application server và các ứng dụng) cần thiết để khởi chạy một instance. AMI này sẽ ghi lại trạng thái hiện tại của instance bao gồm bất kỳ phần mềm và cấu hình nào đã cài đặt.
 
-1. Truy cập [giao diện quản trị dịch vụ IAM](https://console.aws.amazon.com/iamv2/)
-2. Trong thanh điều hướng bên trái, click **Roles**.
+1. Truy cập [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
 
-![role](/images/2.prerequisite/023-iamrole.png)
+2. Trong thanh điều hướng bên trái, nhấp **Instances**.
 
-3. Click **Create role**.
+![role](/images/2.prerequisite/028-createami.png)
 
-![role1](/images/2.prerequisite/024-iamrole.png)
-4. Tại trang **Create role**:
-- Trong phần **Select trusted entity**:
-   - Trong trường **Trusted entity type**, click **AWS service**.
-   - Trong trường **Use case**, click **EC2**.
-- Click **Next**.
+3. Chọn instance đã tạo, nhấp chuột phải và chọn **Image and templates**. Sau đó nhấp **Create image**.
 
-![role1](/images/2.prerequisite/025-iamrole.png)
+![role1](/images/2.prerequisite/029-createami.png)
 
-5. Trong ô Search, nhập **AmazonS3FullAccess** và nhấn Enter để tìm kiếm policy này.
+4. Tại trang **Create image**:
+- Trong phần **Image details**:
+   - Trong trường **Image name**, nhập **Lab AMI**.
+   - Trong trường **Tags - optional**, nhấp **Tag image and snapshots separately**:
+      - Trong trường **Key** của **Tag image**, nhập **Name**.
+      - Trong trường **Value - optional** của **Tag image**, nhập **Lab AMI**.
+      - Trong trường **Key** của **Tag snapshots**, nhập **Name**.
+      - Trong trường **Value - optional** của **Tag snapshots**, nhập **Lab AMI Snapshot**.
 
-- Click policy **AmazonS3FullAccess**.
-- Click **Next**
 
-![createpolicy](/images/2.prerequisite/026-iamrole.png)
+- Nhấp **Create image**.
 
-6. Trong phần **Name, review, and create**:
-- Trong trường **Role name**, nhập **EC2S3FullAccessRole**.
-- Click **Create Role**.
+![role1](/images/2.prerequisite/030-createami.png)
 
-![namerole](/images/2.prerequisite/027-iamrole.png)
+![role1](/images/2.prerequisite/031-createami.png)
 
-7. Sau khi tạo role thành công, bạn sẽ thấy **EC2S3FullAccessRole** được liệt kê trong dashboard IAM Roles,
-xác nhận rằng role đã được tạo và sẵn sàng để gắn vào EC2 instances.
+5. Từ menu bên trái trong EC2 console, nhấp **AMIs** để xác minh rằng AMI đã được tạo.
 
-![namerole](/images/2.prerequisite/028-iamrole.png)
+![createpolicy](/images/2.prerequisite/032-createami.png)
 
-Tiếp theo, chúng ta sẽ kết nối đến **EC2 instance** chúng ta đã tạo qua **SSH**.
+6. Chờ một lúc và bạn sẽ thấy trạng thái AMI chuyển thành **Available**, cho biết thành công.
+
+![namerole](/images/2.prerequisite/033-createami.png)
+
+Tiếp theo, chúng ta sẽ tiếp tục với [**Khôi phục EC2 từ AMI**]({{< ref "4-restore-ec2-ami" >}}).

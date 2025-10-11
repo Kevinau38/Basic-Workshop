@@ -1,5 +1,5 @@
 ---
-title: "Chuẩn bị"
+title: "Chuẩn bị "
 
 weight: 2
 chapter: false
@@ -16,9 +16,10 @@ pre: " <b> 2. </b> "
 
 
 
-Để quản lý an toàn các EC2 instances trên AWS, đặc biệt trong kiến trúc VPC, chúng ta cần cấu hình các quyền và cài đặt mạng phù hợp. Như một phần của việc chuẩn bị, chúng ta sẽ tạo một IAM Role để cấp các quyền cần thiết cho EC2 instances tương tác với các dịch vụ AWS khác như Amazon S3 và Amazon VPC.
+Trong giai đoạn chuẩn bị này, chúng ta sẽ thiết lập các thành phần nền tảng cần thiết cho workshop EC2 Storage. Chúng ta sẽ tạo một Security Group để truy cập mạng, khởi chạy một EC2 instance với web server, và sau đó tạo các tài nguyên liên quan đến storage bao gồm EBS snapshots và Amazon Machine Image (AMI) cho các tình huống sao lưu và khôi phục.
 
 ### Nội dung
 
 - [Chuẩn bị EC2](2.1-createec2/)
-- [Tạo IAM Role](2.2-createiamrole/)
+- [Tạo EBS Snapshot](2.2-create-ebs-snapshot/)
+- [Tạo AMI](2.3-create-ami/)

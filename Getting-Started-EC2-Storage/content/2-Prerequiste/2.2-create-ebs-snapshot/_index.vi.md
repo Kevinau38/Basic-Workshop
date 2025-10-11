@@ -1,48 +1,46 @@
 ---
-title: "Tạo IAM Role"
+title: "Tạo EBS Snapshot"
 
 weight: 2
 chapter: false
 pre: " <b> 2.2 </b> "
 ---
 
-### Tạo IAM Role
+{{% notice info %}}
 
-Trong bước này, chúng ta sẽ tiến hành tạo IAM Role **EC2S3FullAccessRole**. Trong IAM Role này, policy **AmazonS3FullAccess**
-sẽ được gán, cho phép EC2 server có quyền truy cập đầy đủ vào các dịch vụ S3.
+Hoàn thành phần [3. Kết nối đến EC2 instance]({{< ref "3-accessibilitytoinstances" >}}) trước, sau đó quay lại hoàn thành các phần còn lại **2.2** và **2.3** của giai đoạn chuẩn bị.
+{{% /notice %}}
 
-1. Truy cập [giao diện quản trị dịch vụ IAM](https://console.aws.amazon.com/iamv2/)
-2. Trong thanh điều hướng bên trái, click **Roles**.
+### Tạo EBS Snapshot
 
-![role](/images/2.prerequisite/023-iamrole.png)
+Trong bước này, chúng ta sẽ tạo một EBS snapshot của root volume của EC2 instance. EBS snapshots là các bản sao lưu tại thời điểm cụ thể của EBS volumes được lưu trữ trong Amazon S3. Các snapshots này có thể được sử dụng để tạo volumes mới hoặc khôi phục dữ liệu.
 
-3. Click **Create role**.
+1. Truy cập [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
 
-![role1](/images/2.prerequisite/024-iamrole.png)
-4. Tại trang **Create role**:
-- Trong phần **Select trusted entity**:
-   - Trong trường **Trusted entity type**, click **AWS service**.
-   - Trong trường **Use case**, click **EC2**.
-- Click **Next**.
+2. Trong thanh điều hướng bên trái, nhấp vào **Volumes**.
 
-![role1](/images/2.prerequisite/025-iamrole.png)
+![role](/images/2.prerequisite/023-createebsvolumes.png)
 
-5. Trong ô Search, nhập **AmazonS3FullAccess** và nhấn Enter để tìm kiếm policy này.
+3. Chọn volume của instance đã tạo, nhấp chuột phải và chọn **Create snapshot**.
 
-- Click policy **AmazonS3FullAccess**.
-- Click **Next**
+![role1](/images/2.prerequisite/024-createebsvolumes.png)
 
-![createpolicy](/images/2.prerequisite/026-iamrole.png)
+4. Tại trang **Create snapshot**:
+- Trong phần **Snapshot details**:
+   - Trong trường **Description**, nhập **Snapshot for bastion host volume**.
+- Trong phần **Tags**:
+   - Trong trường **Key**, nhập **Name**.
+   - Trong trường **Value - optional**, nhập **Lab EBS Snapshot**.
+- Nhấp **Create snapshot**.
 
-6. Trong phần **Name, review, and create**:
-- Trong trường **Role name**, nhập **EC2S3FullAccessRole**.
-- Click **Create Role**.
+![role1](/images/2.prerequisite/025-createebsvolumes.png)
 
-![namerole](/images/2.prerequisite/027-iamrole.png)
+5. Từ menu bên trái trong EC2 console, nhấp vào **Snapshots** để xác minh rằng snapshot đã được tạo.
 
-7. Sau khi tạo role thành công, bạn sẽ thấy **EC2S3FullAccessRole** được liệt kê trong dashboard IAM Roles,
-xác nhận rằng role đã được tạo và sẵn sàng để gắn vào EC2 instances.
+![createpolicy](/images/2.prerequisite/026-createebsvolumes.png)
 
-![namerole](/images/2.prerequisite/028-iamrole.png)
+6. Chờ một lúc và bạn sẽ thấy trạng thái Snapshot chuyển sang **Completed**, cho biết đã thành công.
 
-Tiếp theo, chúng ta sẽ kết nối đến **EC2 instance** chúng ta đã tạo qua **SSH**.
+![namerole](/images/2.prerequisite/027-createebsvolumes.png)
+
+Tiếp theo, chúng ta sẽ tiến hành **tạo AMI**.

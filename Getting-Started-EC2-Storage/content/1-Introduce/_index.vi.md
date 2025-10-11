@@ -6,14 +6,15 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-Amazon Elastic Compute Cloud (Amazon EC2) là một dịch vụ web cung cấp khả năng tính toán an toàn, có thể thay đổi kích thước trong cloud. Nó được thiết kế để giúp các nhà phát triển dễ dàng thực hiện điện toán đám mây quy mô web bằng cách cho phép họ khởi chạy và quản lý các máy chủ ảo, được gọi là instances, theo yêu cầu.
+Amazon EC2 Storage cung cấp bộ nhớ khối liên tục, hiệu suất cao cho các Amazon EC2 instances thông qua Amazon Elastic Block Store (EBS). Các EBS volumes có thể được gắn vào EC2 instances và cung cấp bộ nhớ liên tục cần thiết cho hệ thống tệp, cơ sở dữ liệu và bất kỳ trường hợp sử dụng nào khác yêu cầu bộ nhớ liên tục.
 
-Với Amazon EC2, người dùng có thể:
+Với Amazon EC2 Storage, người dùng có thể:
 
-- Khởi chạy instances với nhiều hệ điều hành và cấu hình khác nhau.
-- Mở rộng hoặc thu nhỏ tài nguyên tính toán dựa trên yêu cầu workload.
-- Cấu hình cài đặt bảo mật và mạng bằng các công cụ như Security Groups và Key Pairs.
-- Lựa chọn từ nhiều loại instance được tối ưu hóa cho compute, memory, storage, hoặc GPU.
-- Tích hợp với các dịch vụ AWS khác như Amazon VPC, AWS IAM, và Amazon S3.
+- Tạo EBS volumes với các loại volume khác nhau được tối ưu hóa cho hiệu suất hoặc chi phí.
+- Tạo snapshots theo thời điểm của EBS volumes để sao lưu và khôi phục thảm họa.
+- Tạo Amazon Machine Images (AMI) để ghi lại toàn bộ cấu hình instance.
+- Khôi phục EC2 instances từ AMI để nhanh chóng triển khai các cấu hình giống hệt nhau.
+- Mã hóa EBS volumes và snapshots để tăng cường bảo mật.
+- Thay đổi kích thước volumes và thay đổi loại volume khi cần thiết.
 
-Với những ưu điểm trên, Amazon EC2 có thể được triển khai trong kiến trúc Virtual Private Cloud (VPC) sử dụng các thành phần như Internet Gateway, Public Subnet, Security Group, và Route Tables, cho phép người dùng truy cập và quản lý instances một cách an toàn trong khi tối ưu hóa cả chi phí và hiệu suất.
+Workshop này tập trung vào các tình huống quản lý bộ nhớ thực tế bao gồm tạo snapshots, xây dựng AMIs và khôi phục instances để chứng minh cách các giải pháp EC2 storage cung cấp khả năng lưu trữ dữ liệu và khôi phục cho các workloads đám mây.
