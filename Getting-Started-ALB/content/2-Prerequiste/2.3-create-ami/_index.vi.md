@@ -44,4 +44,4 @@ Trong bước này, chúng ta sẽ tạo một Amazon Machine Image (AMI) từ E
 
 ![namerole](/images/2.prerequisite/033-createami.png)
 
-Tiếp theo, chúng ta sẽ tiếp tục với [**Khôi phục EC2 từ AMI**]({{< ref "4-restore-ec2-ami" >}}).
+Tiếp theo, chúng ta sẽ tiếp tục với.

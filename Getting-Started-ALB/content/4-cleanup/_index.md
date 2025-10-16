@@ -1,9 +1,9 @@
 ---
 title: "Clean up resources"
 
-weight: 6
+weight: 4
 chapter: false
-pre: " <b> 6. </b> "
+pre: " <b> 4. </b> "
 ---
 
 We will take the following steps to delete the resources we created in this exercise.

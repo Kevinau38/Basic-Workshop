@@ -6,15 +6,15 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-Amazon EC2 Storage provides persistent, high-performance block storage for Amazon EC2 instances through Amazon Elastic Block Store (EBS). EBS volumes can be attached to EC2 instances and provide the persistent storage needed for file systems, databases, and any other use cases that require persistent storage.
+Application Load Balancer (ALB) is a Layer 7 load balancer that automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in multiple Availability Zones. ALB increases the availability and fault tolerance of your applications.
 
-With Amazon EC2 Storage, users can:
+With Application Load Balancer, users can:
 
-- Create EBS volumes with different volume types optimized for performance or cost.
-- Take point-in-time snapshots of EBS volumes for backup and disaster recovery.
-- Create Amazon Machine Images (AMI) to capture the entire instance configuration.
-- Restore EC2 instances from AMI to quickly deploy identical configurations.
-- Encrypt EBS volumes and snapshots for enhanced security.
-- Resize volumes and change volume types as needed.
+- Distribute traffic across multiple EC2 instances in different Availability Zones.
+- Perform health checks on targets to ensure traffic is only routed to healthy instances.
+- Support advanced routing based on content, host headers, and path patterns.
+- Integrate with AWS services like Auto Scaling and CloudWatch.
+- Provide SSL/TLS termination and certificate management.
+- Handle millions of requests per second with low latency.
 
-This workshop focuses on practical storage management scenarios including creating snapshots, building AMIs, and restoring instances to demonstrate how EC2 storage solutions provide data persistence and recovery capabilities for cloud workloads.
+This workshop focuses on practical load balancing scenarios including creating target groups, configuring health checks, and setting up an Application Load Balancer to demonstrate how ALB provides high availability and scalability for web applications.

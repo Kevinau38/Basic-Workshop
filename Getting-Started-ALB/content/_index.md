@@ -1,15 +1,15 @@
 ---
-title: "EC2 Storage"
+title: "Application Load Balancer"
 
 weight: 1
 chapter: false
 ---
 
-# Getting Started with Amazon EC2 Storage
+# Getting Started with Application Load Balancer
 
 ### Overall
 
-In this lab, you'll learn the basics and practice of Amazon EC2 Storage. Perform creating EC2 instances, EBS snapshots, AMI creation, and restoring instances from AMI.
+In this lab, you'll learn the basics and practice of Application Load Balancer. Perform creating Security Groups, EC2 instances, Target Groups, and configuring ALB to distribute traffic across multiple instances.
 
 ![ConnectPrivate](/images/arc-log.png)
 
@@ -17,7 +17,5 @@ In this lab, you'll learn the basics and practice of Amazon EC2 Storage. Perform
 
 1.  [Introduction ](1-introduce/)
 2.  [Preparation](2-prerequiste/)
-3.  [Connect to EC2 instance](3-accessibilitytoinstances/)
-4.  [Restore EC2 from AMI](4-restore-ec2-ami/)
-5.  [Verify webserver and created file](5-verify-webserver-created-file/)
-6.  [Clean up resources](6-cleanup/)
+3.  [Test ALB](3-test-alb/)
+4.  [Clean up resources](4-cleanup/)

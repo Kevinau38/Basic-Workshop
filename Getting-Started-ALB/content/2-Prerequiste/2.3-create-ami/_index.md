@@ -44,4 +44,4 @@ In this step, we will create an Amazon Machine Image (AMI) from our EC2 instance
 
 ![namerole](/images/2.prerequisite/033-createami.png)
 
-Next, we will continue with [**Restore EC2 from AMI**]({{< ref "4-restore-ec2-ami" >}}).
+Next, we will continue with.
