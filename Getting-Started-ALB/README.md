@@ -1,4 +1,4 @@
-# Getting Started with EC2 Storage Workshop
+# Getting Started with Application Load Balancer Workshop
 
 ## Hướng dẫn sử dụng
 
@@ -12,7 +12,7 @@
 
 2. **Di chuyển đến thư mục chứa workshop:**
    ```cmd
-   cd Getting-Started-EC2-Storage
+   cd Getting-Started-ALB
    ```
 
 3. **Chạy Hugo server:**
@@ -27,14 +27,12 @@
 
 ### Nội dung workshop
 
-Workshop này hướng dẫn các bước cơ bản để làm việc với Amazon EC2 Storage:
+Workshop này hướng dẫn các bước cơ bản để làm việc với Application Load Balancer:
 
-1. **Giới thiệu** - Tổng quan về Amazon EC2 Storage.
-2. **Chuẩn bị** - Tạo Security Group, EC2 instance, EBS Snapshot và AMI.
-3. **Kết nối đến EC2 instance** - Connect qua EC2 Instance Connect, kiểm tra web server và tạo file.
-4. **Khôi phục EC2 từ AMI** - Khôi phục EC2 instance từ AMI đã tạo.
-5. **Kiểm tra webserver và file đã tạo** - Xác minh dữ liệu đã được bảo toàn trong AMI.
-6. **Dọn dẹp tài nguyên** - Xóa các tài nguyên đã tạo.
+1. **Giới thiệu** - Tổng quan về Application Load Balancer.
+2. **Chuẩn bị** - Tạo Security Group, EC2 instances, Target Group và ELB.
+3. **Kiểm tra ALB** - Kiểm tra hoạt động của Application Load Balancer.
+4. **Dọn dẹp tài nguyên** - Xóa các tài nguyên đã tạo.
 
 ### Dừng server
 
