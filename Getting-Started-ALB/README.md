@@ -30,7 +30,7 @@
 Workshop này hướng dẫn các bước cơ bản để làm việc với Application Load Balancer:
 
 1. **Giới thiệu** - Tổng quan về Application Load Balancer.
-2. **Chuẩn bị** - Tạo Security Group, EC2 instances, Target Group và ELB.
+2. **Chuẩn bị** - Tạo Security Group, EC2 instances, Target Group và ALB.
 3. **Kiểm tra ALB** - Kiểm tra hoạt động của Application Load Balancer.
 4. **Dọn dẹp tài nguyên** - Xóa các tài nguyên đã tạo.
 

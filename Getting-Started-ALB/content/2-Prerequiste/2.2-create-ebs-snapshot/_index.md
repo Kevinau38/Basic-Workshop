@@ -1,46 +1,61 @@
 ---
-title: "Create EBS Snapshot"
+title: "Create EC2 Instances"
 
 weight: 2
 chapter: false
 pre: " <b> 2.2 </b> "
 ---
 
-{{% notice info %}}
+To test Load balancing, we will create 2 EC2 instances in 2 different Availability Zones as below:
 
-Complete section [3. Connect to EC2 instance]({{< ref "3-accessibilitytoinstances" >}}) first, then return to complete the remaining sections **2.2** and **2.3** of the preparation phase.
-{{% /notice %}}
+## Create d-ec2-web-server-01
 
-### Create EBS Snapshot
+1. Go to **EC2 Console** → **Instances** → **Launch instances**
+2. **Name**: `d-ec2-web-server-01`
+3. **OS**: Default (Amazon Linux 2023)
+4. **Instance type**: Default (t2.micro)
+5. **Key pair**: Create new keypair with name: `d-key-common`
+6. **Network Setting**:
+   - **VPC**: Default
+   - **Subnet**: my-subnet-01
+   - **Auto-assign public IP**: Enable
+   - **Select existing security group**: WebServer-SG
+7. **Advanced details (User data)**:
+```bash
+#!/bin/bash
+yum update -y
+yum install -y httpd.x86_64
+systemctl start httpd.service
+systemctl enable httpd.service
+echo "Hello World from $(hostname -f)" > /var/www/html/index.html
+```
+8. Click **Launch instance**
 
-In this step, we will create an EBS snapshot of our EC2 instance's root volume. EBS snapshots are point-in-time backups of your EBS volumes that are stored in Amazon S3. These snapshots can be used to create new volumes or restore data.
+![EC2-01](/images/ec2-01.png)
 
-1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
+## Create d-ec2-web-server-02
 
-2. In the left navigation bar, click **Volumes**.
+1. Go to **EC2 Console** → **Instances** → **Launch instances**
+2. **Name**: `d-ec2-web-server-02`
+3. **OS**: Default (Amazon Linux 2023)
+4. **Instance type**: Default (t2.micro)
+5. **Key pair**: Use existing keypair: `d-key-common`
+6. **Network Setting**:
+   - **VPC**: Default
+   - **Subnet**: my-subnet-02
+   - **Auto-assign public IP**: Enable
+   - **Select existing security group**: WebServer-SG
+7. **Advanced details (User data)**:
+```bash
+#!/bin/bash
+yum update -y
+yum install -y httpd.x86_64
+systemctl start httpd.service
+systemctl enable httpd.service
+echo "Hello World from $(hostname -f)" > /var/www/html/index.html
+```
+8. Click **Launch instance**
 
-![role](/images/2.prerequisite/023-createebsvolumes.png)
+![EC2-02](/images/ec2-02.png)
 
-3. Select the volume of the created instance, right-click and select **Create snapshot**.
-
-![role1](/images/2.prerequisite/024-createebsvolumes.png)
-
-4. At the **Create snapshot** page:
-- In the **Snapshot details** section:
-   - In the **Description** field, enter **Snapshot for bastion host volume**.
-- In the **Tags** section:
-   - In the **Key** field, enter **Name**.
-   - In the **Value - optional** field, enter **Lab EBS Snapshot**.
-- Click **Create snapshot**.
-
-![role1](/images/2.prerequisite/025-createebsvolumes.png)
-
-5. From the left menu in EC2 console, click **Snapshots** to verify that the snapshot has been created.
-
-![createpolicy](/images/2.prerequisite/026-createebsvolumes.png)
-
-6. Wait for a moment and you will see the Snapshot status change to **Completed**, indicating success.
-
-![namerole](/images/2.prerequisite/027-createebsvolumes.png)
-
-Next, we will proceed to **create AMI**.
+Now that we have created our web server instances, let's proceed to create a Target Group to organize these instances for our Application Load Balancer.

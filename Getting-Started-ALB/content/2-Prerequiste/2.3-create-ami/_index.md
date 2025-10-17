@@ -1,47 +1,46 @@
 ---
-title: "Create AMI"
+title: "Create Target Group"
 
 weight: 3
 chapter: false
 pre: " <b> 2.3 </b> "
 ---
 
-### Create AMI
+## Create Target Group
 
-In this step, we will create an Amazon Machine Image (AMI) from our EC2 instance. An AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch an instance. This AMI will capture the current state of our instance including any installed software and configurations.
+1. Go to **EC2 Console** → **Target Groups** → Click **Create target group**
 
-1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
+2. **Choose a target type**: Instances
 
-2. In the left navigation bar, click **Instances**.
+3. **Target group name**: `d-tg-web-server`
 
-![role](/images/2.prerequisite/028-createami.png)
+4. **Protocol**: HTTP
 
-3. Select the created instance, right-click and select **Image and templates**. Then click **Create image**.
+5. **Port**: 80
 
-![role1](/images/2.prerequisite/029-createami.png)
+6. **VPC**: Select default VPC
 
-4. At the **Create image** page:
-- In the **Image details** section:
-   - In the **Image name** field, enter **Lab AMI**.
-   - In the **Tags - optional** field, click **Tag image and snapshots separately**:
-      - In the **Key** field of **Tag image**, enter **Name**.
-      - In the **Value - optional** field of **Tag image**, enter **Lab AMI**.
-      - In the **Key** field of **Tag snapshots**, enter **Name**.
-      - In the **Value - optional** field of **Tag snapshots**, enter **Lab AMI Snapshot**.
+7. **Tags**:
+   - Key: Name, Value: `d-tg-web-server`
 
+8. Keep other settings as default
 
-- Click **Create image**.
+9. Click **Next**
 
-![role1](/images/2.prerequisite/030-createami.png)
+![Target-Group-Config](/images/target-group-config.png)
 
-![role1](/images/2.prerequisite/031-createami.png)
+## Register EC2 instances to Target Group
 
-5. From the left menu in EC2 console, click **AMIs** to verify that the AMIs has been created.
+1. At this step, we will add the 2 instances created earlier to Targets
 
-![createpolicy](/images/2.prerequisite/032-createami.png)
+2. Check and select both instances:
+   - d-ec2-web-server-01
+   - d-ec2-web-server-02
 
-6. Wait for a moment and you will see the AMIs status change to **Available**, indicating success.
+3. Click **Include as pending below**
 
-![namerole](/images/2.prerequisite/033-createami.png)
+4. Click **Create target group**
 
-Next, we will continue with.
+![Target-Group-Register](/images/target-group-register.png)
+
+Now that we have created our Target Group and registered our EC2 instances, let's proceed to create the Application Load Balancer to distribute traffic across these instances.

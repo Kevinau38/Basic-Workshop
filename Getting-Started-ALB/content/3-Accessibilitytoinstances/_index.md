@@ -1,5 +1,5 @@
 ---
-title: "Connect to EC2 instance"
+title: "Test ALB"
 
 weight: 3
 chapter: false

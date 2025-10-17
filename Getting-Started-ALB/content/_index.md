@@ -9,7 +9,7 @@ chapter: false
 
 ### Overall
 
-In this lab, you'll learn the basics and practice of Application Load Balancer. Perform creating Security Groups, EC2 instances, Target Groups, and configuring ALB to distribute traffic across multiple instances.
+In this lab, you'll learn the basics and practice of Application Load Balancer. Perform creating Security Groups, EC2 instances, Target Groups, creating and configuring ALB to distribute traffic across multiple instances.
 
 ![ConnectPrivate](/images/arc-log.png)
 
