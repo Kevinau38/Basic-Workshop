@@ -12,11 +12,11 @@ In this step, we will test our Application Load Balancer to verify that it's pro
 
 1. Go to **EC2 Console** → **Load Balancers**
 
-2. Select your load balancer `d-alb-web-alb`
+2. Select your load balancer **d-alb-web-alb**
 
 3. Copy the **DNS name** from the Details section
 
-![ALB-DNS](/images/alb-dns.png)
+![ALB-DNS](/images/3.testalb/001-testalb.png)
 
 ## Access from Browser
 
@@ -26,7 +26,7 @@ In this step, we will test our Application Load Balancer to verify that it's pro
 
 3. You should see a page displaying "Hello World from" followed by the hostname of one of your EC2 instances
 
-![ALB-Browser](/images/alb-browser.png)
+![ALB-Browser](/images/3.testalb/002-testalb.png)
 
 ## Test Load Balancing
 
@@ -38,6 +38,8 @@ In this step, we will test our Application Load Balancer to verify that it's pro
 
 3. This demonstrates that the Application Load Balancer is successfully distributing traffic across both instances
 
-![ALB-LoadBalance](/images/alb-loadbalance.png)
+![ALB-LoadBalance-1](/images/3.testalb/003-testalb.png)
+
+![ALB-LoadBalance-2](/images/3.testalb/004-testalb.png)
 
 Now that we have successfully tested our Application Load Balancer and verified that it's distributing traffic properly, let's proceed to clean up the resources we created.

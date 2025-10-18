@@ -8,7 +8,7 @@ pre: " <b> 2.2 </b> "
 
 {{% notice info %}}
 
-Hoàn thành phần [3. Kết nối đến EC2 instance]({{< ref "3-accessibilitytoinstances" >}}) trước, sau đó quay lại hoàn thành các phần còn lại **2.2** và **2.3** của giai đoạn chuẩn bị.
+Hoàn thành phần rước, sau đó quay lại hoàn thành các phần còn lại **2.2** và **2.3** của giai đoạn chuẩn bị.
 {{% /notice %}}
 
 ### Tạo EBS Snapshot

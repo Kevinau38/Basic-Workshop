@@ -17,35 +17,43 @@ We will take the following steps to delete the resources we created in this exer
 3. Click **Instance state** → **Terminate instance**
 4. Click **Terminate** to confirm
 
-![Terminate-EC2](/images/cleanup-ec2.png)
+![Terminate-EC2-1](/images/4.clean/001-clean.png)
+
+![Terminate-EC2-2](/images/4.clean/002-clean.png)
 
 ## Delete Application Load Balancer
 
 1. Go to **EC2 Console** → **Load Balancers**
-2. Select the load balancer `d-alb-web-alb`
+2. Select the load balancer **d-alb-web-alb**
 3. Click **Actions** → **Delete load balancer**
 4. Type **confirm** and click **Delete**
 
-![Delete-ALB](/images/cleanup-alb.png)
+![Delete-ALB-1](/images/4.clean/003-clean.png)
+
+![Delete-ALB-2](/images/4.clean/004-clean.png)
 
 ## Delete Target Group
 
 1. Go to **EC2 Console** → **Target Groups**
-2. Select the target group `d-tg-web-server`
+2. Select the target group **d-tg-web-server**
 3. Click **Actions** → **Delete**
 4. Click **Yes, delete** to confirm
 
-![Delete-TG](/images/cleanup-tg.png)
+![Delete-TG-1](/images/4.clean/005-clean.png)
+
+![Delete-TG-2](/images/4.clean/006-clean.png)
 
 ## Delete Security Groups
 
 1. Go to **EC2 Console** → **Security Groups**
 2. Select the security groups:
-   - WebServer-SG
-   - ALB-SG
+   - **WebServer-SG**
+   - **ALB-SG**
 3. Click **Actions** → **Delete security groups**
 4. Click **Delete** to confirm
 
-![Delete-SG](/images/cleanup-sg.png)
+![Delete-SG-1](/images/4.clean/007-clean.png)
+
+![Delete-SG-2](/images/4.clean/008-clean.png)
 
 Congratulations! You have successfully completed the Application Load Balancer workshop and cleaned up all the resources.
