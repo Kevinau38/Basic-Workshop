@@ -8,40 +8,44 @@ pre: " <b> 4. </b> "
 
 We will take the following steps to delete the resources we created in this exercise.
 
-#### Delete EC2 instances
+## Terminate EC2 Instances
 
-1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
-   - Click **Instances**.
-   - Select both EC2 instances (original and restored from AMI).
-   - Click **Instance state**.
-   - Click **Terminate instance**, then click **Terminate** to confirm.
+1. Go to **EC2 Console** → **Instances**
+2. Select both EC2 instances:
+   - d-ec2-web-server-01
+   - d-ec2-web-server-02
+3. Click **Instance state** → **Terminate instance**
+4. Click **Terminate** to confirm
 
-![clean](/images/6.clean/001-clean.png)
+![Terminate-EC2](/images/cleanup-ec2.png)
 
-![clean](/images/6.clean/002-clean.png)
+## Delete Application Load Balancer
 
-#### Delete AMI and Snapshots
+1. Go to **EC2 Console** → **Load Balancers**
+2. Select the load balancer `d-alb-web-alb`
+3. Click **Actions** → **Delete load balancer**
+4. Type **confirm** and click **Delete**
 
-1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
-   - Click **AMIs**.
-   - Select the AMI we created.
-   - Click **Actions** → **Deregister AMI**.
-   - Click **Snapshots**.
-   - Select the snapshots we created.
-   - Click **Actions** → **Delete snapshot**.
+![Delete-ALB](/images/cleanup-alb.png)
 
-![clean](/images/6.clean/003-clean.png)
+## Delete Target Group
 
-![clean](/images/6.clean/004-clean.png)
+1. Go to **EC2 Console** → **Target Groups**
+2. Select the target group `d-tg-web-server`
+3. Click **Actions** → **Delete**
+4. Click **Yes, delete** to confirm
 
-#### Delete Security Group
+![Delete-TG](/images/cleanup-tg.png)
 
-1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
-   - Click **Security Groups**.
-   - Select the security group we created.
-   - Click **Actions**.
-   - Click **Delete security groups**, then click **Delete** to confirm.
+## Delete Security Groups
 
-![clean](/images/6.clean/005-clean.png)
+1. Go to **EC2 Console** → **Security Groups**
+2. Select the security groups:
+   - WebServer-SG
+   - ALB-SG
+3. Click **Actions** → **Delete security groups**
+4. Click **Delete** to confirm
 
-![clean](/images/6.clean/006-clean.png)
+![Delete-SG](/images/cleanup-sg.png)
+
+Congratulations! You have successfully completed the Application Load Balancer workshop and cleaned up all the resources.
