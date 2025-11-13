@@ -1,9 +1,9 @@
 ---
 title: "Test the website"
 
-weight: 5
+weight: 6
 chapter: false
-pre: " <b> 5. </b> "
+pre: " <b> 6. </b> "
 ---
 
 In this step, we will test our static website to verify that it's working correctly. We'll test both the main page (index.html) and the error page (error.html) functionality.

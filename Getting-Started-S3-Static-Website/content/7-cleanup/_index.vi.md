@@ -1,9 +1,9 @@
 ---
 title: "Dọn dẹp tài nguyên"
 
-weight: 6
+weight: 7
 chapter: false
-pre: " <b> 6. </b> "
+pre: " <b> 7. </b> "
 ---
 
 Chúng ta sẽ thực hiện các bước sau để xóa các tài nguyên đã tạo trong bài tập này.
