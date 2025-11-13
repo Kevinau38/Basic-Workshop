@@ -30,12 +30,12 @@
 Workshop này hướng dẫn các bước cơ bản để tạo static website sử dụng Amazon S3:
 
 1. **Giới thiệu** - Tổng quan về Amazon S3 Static Website Hosting.
-2. **Register domain with Route53 (Optional)** - Mua domain từ Route53.
+2. **Register domain with Route53** - Mua domain từ Route53.
 3. **Creating a S3 bucket** - Tạo S3 bucket để host website.
 4. **Enable Static Website hosting settings** - Cấu hình S3 bucket cho static website hosting.
 5. **Test the website** - Kiểm tra website hoạt động.
 6. **Test the website's error page** - Kiểm tra trang lỗi của website.
-7. **Setting Route53 to access http://s3static.{domain} (Optional)** - Cấu hình Route53 cho custom domain.
+7. **Setting Route53 to access http://s3static.{domain}** - Cấu hình Route53 cho custom domain.
 8. **Clean up** - Dọn dẹp tài nguyên đã tạo.
 
 ### Dừng server

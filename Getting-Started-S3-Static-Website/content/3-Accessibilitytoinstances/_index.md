@@ -1,5 +1,5 @@
 ---
-title: "Connect to EC2 instance"
+title: "Creating a S3 bucket"
 
 weight: 3
 chapter: false
@@ -8,13 +8,30 @@ pre: " <b> 3. </b> "
 
 {{% notice info %}}
 
-After completing **this section**, we will return to complete the remaining [**2 sections of part 2**]({{< ref "2-prerequiste/2.2-create-ebs-snapshot" >}}), then continue with the remaining sections.
+• **Region**: US East (N. Virginia) - us-east-1 (Required for S3 static website hosting).  
+• **Bucket name**: Must match your domain name exactly.  
 {{% /notice %}}
 
-In this step, we will connect to our EC2 instance via EC2 Instance Connect, verify that the web server is running, and create some files. This will help us test the data persistence when we restore from AMI later.
+In this step, we will create an S3 bucket that will host our static website. The bucket name must match your domain name exactly for the custom domain configuration to work properly.
 
-### Content
+## Create S3 Bucket
 
-3.1. [Connect via EC2 Instance Connect](3.1-connect-instance/) \
-3.2. [Verify web server](3.2-verify-webserver/) \
-3.3. [Create test files](3.3-create-files/)
+1. Go to **S3 Console** → **Buckets**
+2. Click **Create bucket**
+
+![Create-S3-Bucket](/images/3.connect/001-s3.png)
+
+3. **Bucket name**: Enter your domain name (e.g., `s3static.basic-workshop.click`)
+
+![Create-S3-Bucket](/images/3.connect/002-s3.png)
+
+4. **Block Public Access settings**: Uncheck **Block all public access**
+5. Check **I acknowledge that the current settings might result in this bucket and the objects within becoming public**
+
+![Create-S3-Bucket](/images/3.connect/003-s3.png)
+
+6. Click **Create bucket**
+
+![Create-S3-Bucket](/images/3.connect/004-s3.png)
+
+Now that we have created our S3 bucket, let's proceed to enable static website hosting settings.

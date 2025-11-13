@@ -6,15 +6,15 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-Amazon EC2 Storage provides persistent, high-performance block storage for Amazon EC2 instances through Amazon Elastic Block Store (EBS). EBS volumes can be attached to EC2 instances and provide the persistent storage needed for file systems, databases, and any other use cases that require persistent storage.
+Amazon S3 (Simple Storage Service) provides a simple and cost-effective way to host static websites. S3 static website hosting allows you to serve HTML, CSS, JavaScript, and other static content directly from an S3 bucket without the need for web servers or complex infrastructure.
 
-With Amazon EC2 Storage, users can:
+With Amazon S3 Static Website Hosting, users can:
 
-- Create EBS volumes with different volume types optimized for performance or cost.
-- Take point-in-time snapshots of EBS volumes for backup and disaster recovery.
-- Create Amazon Machine Images (AMI) to capture the entire instance configuration.
-- Restore EC2 instances from AMI to quickly deploy identical configurations.
-- Encrypt EBS volumes and snapshots for enhanced security.
-- Resize volumes and change volume types as needed.
+- Host static websites with high availability and scalability.
+- Serve content globally with low latency using CloudFront integration.
+- Configure custom domain names using Route53.
+- Set up custom error pages and redirects.
+- Benefit from S3's durability and security features.
+- Pay only for the storage and bandwidth you use.
 
-This workshop focuses on practical storage management scenarios including creating snapshots, building AMIs, and restoring instances to demonstrate how EC2 storage solutions provide data persistence and recovery capabilities for cloud workloads.
+This workshop focuses on practical scenarios including creating S3 buckets, configuring static website hosting, testing websites, and optionally setting up custom domains to demonstrate how S3 provides a simple and cost-effective solution for hosting static websites.

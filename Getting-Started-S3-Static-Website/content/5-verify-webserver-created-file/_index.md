@@ -1,39 +1,42 @@
 ---
-title: "Verify webserver and created file"
+title: "Test the website"
 
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
 
-In this step, we will connect to the **new EC2 instance restored from AMI** and verify that **our web server** and **test file** are still intact, demonstrating successful data persistence through AMI backup and restore.
+In this step, we will test our static website to verify that it's working correctly. We'll test both the main page (index.html) and the error page (error.html) functionality.
 
-1. After the EC2 instance is running, connect using EC2 Instance Connect to check if the file created in **step 3.3** still exists.
+## Test the Main Website
 
-![role1](/images/5.verify/001-verify.png)
+1. Use the static website URL (endpoint copied earlier)
+2. Or go to your **S3 Bucket** → **Properties** tab → scroll down to **Static website hosting** section to find the URL
+3. Copy the **Bucket website endpoint** URL
+4. Open your web browser and paste the URL
+5. You should see the content of your `index.html` file displayed
 
-![role1](/images/5.verify/002-verify.png)
+![Test-Main-Page](/images/5.verify/001-verify.png)
 
-2. After connecting, run the following command to verify that the file still exists:
+![Test-Main-Page](/images/5.verify/002-verify.png)
 
-```
-ls
-```
+## Test the Error Page
 
-You should see the `test.txt` file that we created earlier.
+1. In your browser, access the same URL but add some random characters at the end
+2. For example: `your-website-url/random-characters` or `your-website-url/nonexistent-page`
+3. You should see the content of your `error.html` file displayed
+4. This demonstrates that the error page configuration is working correctly
 
-![role1](/images/5.verify/003-verify.png)
+![Test-Error-Page](/images/5.verify/003-verify.png)
 
-3. Next, access the web server from your browser using the public IP address:
+![Test-Error-Page](/images/5.verify/004-verify.png)
 
-```
-http://{public-ip}
-```
+## Verify Website Functionality
 
-![role1](/images/5.verify/004-verify.png)
+1. Confirm that both pages load correctly
+2. Check that images and styling are displayed properly
+3. Verify that the error page appears when accessing non-existent pages
 
-4. Verify that the web server is still running and displaying the expected content.
+![Verify-Functionality](/images/5.verify/005-verify.png)
 
-![role1](/images/5.verify/005-verify.png)
-
-We have successfully completed the verification. Next is the essential step of **Clean up resources**.
+We have successfully tested our static website. Both the main page and error page are working correctly. Next, we'll proceed to configure Route53 for custom domain access.
