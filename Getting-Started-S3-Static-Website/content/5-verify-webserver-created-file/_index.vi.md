@@ -1,39 +1,40 @@
 ---
-title: "Kiểm tra webserver và file đã tạo"
+title: "Kiểm tra website"
 
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
 
-Trong bước này, chúng ta sẽ kết nối đến **EC2 instance mới được khôi phục từ AMI** và xác minh rằng **web server** và **test file** của chúng ta vẫn còn nguyên vẹn, chứng minh việc lưu trữ dữ liệu thành công thông qua sao lưu và khôi phục AMI.
+Trong bước này, chúng ta sẽ kiểm tra static website để xác minh rằng nó hoạt động chính xác. Chúng ta sẽ kiểm tra cả trang chính (index.html) và chức năng trang lỗi (error.html).
 
-1. Sau khi EC2 instance đang chạy, kết nối bằng EC2 Instance Connect để kiểm tra xem file được tạo trong **bước 3.3** có còn tồn tại không.
+## Kiểm tra Website chính
 
-![role1](/images/5.verify/001-verify.png)
+1. Sử dụng static website URL (endpoint đã copy trước đó)
+2. Hoặc vào **S3 Bucket** → tab **Properties** → cuộn xuống phần **Static website hosting** để tìm URL
+3. Copy **Bucket website endpoint** URL
+4. Mở trình duyệt web và paste URL
+5. Bạn sẽ thấy nội dung của file `index.html` được hiển thị
 
-![role1](/images/5.verify/002-verify.png)
+![Test-Main-Page](/images/5.verify/001-test.png)
 
-2. Sau khi kết nối, chạy lệnh sau để xác minh rằng file vẫn tồn tại:
+## Kiểm tra trang Error
 
-```
-ls
-```
+1. Trong trình duyệt, truy cập cùng URL nhưng thêm một số ký tự ngẫu nhiên ở cuối
+2. Ví dụ: `your-website-url/random-characters` hoặc `your-website-url/nonexistent-page`
+3. Bạn sẽ thấy nội dung của file `error.html` được hiển thị
+4. Điều này chứng minh rằng cấu hình trang lỗi đang hoạt động chính xác
 
-Bạn sẽ thấy file `test.txt` mà chúng ta đã tạo trước đó.
+![Test-Error-Page](/images/5.verify/002-test.png)
 
-![role1](/images/5.verify/003-verify.png)
+## Xác minh chức năng Website
 
-3. Tiếp theo, truy cập web server từ trình duyệt của bạn bằng địa chỉ public IP:
+1. Xác nhận rằng cả hai trang đều load chính xác
+2. Kiểm tra rằng hình ảnh và styling được hiển thị đúng cách
+3. Xác minh rằng trang lỗi xuất hiện khi truy cập các trang không tồn tại
 
-```
-http://{public-ip}
-```
+![Test-Main-Page](/images/5.verify/001-test.png)
 
-![role1](/images/5.verify/004-verify.png)
+![Test-Error-Page](/images/5.verify/002-test.png)
 
-4. Xác minh rằng web server vẫn đang chạy và hiển thị nội dung mong đợi.
-
-![role1](/images/5.verify/005-verify.png)
-
-Chúng ta đã hoàn thành thành công việc xác minh. Tiếp theo là bước thiết yếu **Dọn dẹp tài nguyên**.
+Chúng ta đã kiểm tra thành công static website. Cả trang chính và trang lỗi đều hoạt động chính xác. Tiếp theo, chúng ta sẽ tiến hành cấu hình Route53 để truy cập custom domain.

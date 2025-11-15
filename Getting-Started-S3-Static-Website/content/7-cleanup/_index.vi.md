@@ -6,42 +6,50 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-Chúng ta sẽ thực hiện các bước sau để xóa các tài nguyên đã tạo trong bài tập này.
+Chúng ta sẽ thực hiện các bước sau để xóa các tài nguyên đã tạo trong bài tập này để tránh phí không cần thiết.
 
-#### Xóa EC2 instances
+## Xóa Route53 DNS Record
 
-1. Truy cập [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
-   - Nhấp **Instances**.
-   - Chọn cả hai EC2 instances (gốc và được khôi phục từ AMI).
-   - Nhấp **Instance state**.
-   - Nhấp **Terminate instance**, sau đó nhấp **Terminate** để xác nhận.
+1. Vào **Route53 Console** → **Hosted zones**
+2. Click vào tên domain của bạn
 
-![clean](/images/6.clean/001-clean.png)
+![Delete-Route53](/images/7.clean/001-clean.png)
 
-![clean](/images/6.clean/002-clean.png)
+3. Chọn **A record** cho `s3static`
+4. Click **Delete record**
 
-#### Xóa AMI và Snapshots
+![Delete-Route53](/images/7.clean/002-clean.png)
 
-1. Truy cập [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
-   - Nhấp **AMIs**.
-   - Chọn AMI chúng ta đã tạo.
-   - Nhấp **Actions** → **Deregister AMI**.
-   - Nhấp **Snapshots**.
-   - Chọn các snapshots chúng ta đã tạo.
-   - Nhấp **Actions** → **Delete snapshot**.
+5. Click **Delete** để xác nhận
 
-![clean](/images/6.clean/003-clean.png)
+![Delete-Route53](/images/7.clean/003-clean.png)
 
-![clean](/images/6.clean/004-clean.png)
+## Làm trống và Xóa S3 Bucket
 
-#### Xóa Security Group
+1. Vào **S3 Console** → **Buckets**
+2. Click vào tên bucket của bạn
 
-1. Truy cập [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
-   - Nhấp **Security Groups**.
-   - Chọn security group chúng ta đã tạo.
-   - Nhấp **Actions**.
-   - Nhấp **Delete security groups**, sau đó nhấp **Delete** để xác nhận.
+![Delete-S3-Bucket](/images/7.clean/004-clean.png)
 
-![clean](/images/6.clean/005-clean.png)
+3. Chọn tất cả objects trong bucket
+4. Click **Delete**
 
-![clean](/images/6.clean/006-clean.png)
+![Delete-S3-Bucket](/images/7.clean/005-clean.png)
+
+5. Gõ `permanently delete` để xác nhận
+6. Click **Delete objects**
+
+![Delete-S3-Bucket](/images/7.clean/006-clean.png)
+
+7. Quay lại danh sách buckets
+8. Chọn bucket của bạn
+9. Click **Delete**
+
+![Delete-S3-Bucket](/images/7.clean/007-clean.png)
+
+10. Gõ tên bucket để xác nhận
+11. Click **Delete bucket**
+
+![Delete-S3-Bucket](/images/7.clean/008-clean.png)
+
+Chúc mừng! Bạn đã hoàn thành thành công workshop S3 Static Website và dọn dẹp tất cả tài nguyên. Bạn đã học cách tạo static website sử dụng S3, cấu hình custom domain với Route53, và quản lý tài nguyên AWS một cách hiệu quả.

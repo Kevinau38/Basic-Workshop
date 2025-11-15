@@ -1,23 +1,24 @@
 ---
-title: "EC2 Storage"
+title: "S3 Static Website"
 
 weight: 1
 chapter: false
 ---
 
-# Bắt đầu với Amazon EC2 Storage
+# Bắt đầu với S3 Static Website
 
 ### Tổng quan
 
-Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon EC2 Storage. Thực hiện tạo EC2 instances, EBS snapshots, tạo AMI, và khôi phục instances từ AMI.
+Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành tạo static website sử dụng Amazon S3. Thực hiện tạo S3 bucket, kích hoạt static website hosting, kiểm tra website, và cấu hình custom domain với Route53.
 
 ![ConnectPrivate](/images/arc-log.png)
 
 ### Nội dung
 
 1.  [Giới thiệu ](1-introduce/)
-2.  [Chuẩn bị](2-prerequiste/)
-3.  [Kết nối đến EC2 instance](3-accessibilitytoinstances/)
-4.  [Khôi phục EC2 từ AMI](4-restore-ec2-ami/)
-5.  [Kiểm tra webserver và file đã tạo](5-verify-webserver-created-file/)
-6.  [Dọn dẹp tài nguyên](6-cleanup/)
+2.  [Đăng ký domain với Route53](2-register-domain/)
+3.  [Tạo S3 bucket](3-create-s3-bucket/)
+4.  [Kích hoạt Static Website hosting](4-enable-static-hosting/)
+5.  [Kiểm tra website](5-test-website/)
+6.  [Cấu hình Route53 để truy cập http://s3static.{domain}](6-setup-route53/)
+7.  [Dọn dẹp tài nguyên](7-cleanup/)

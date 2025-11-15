@@ -6,15 +6,15 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-Amazon EC2 Storage cung cấp bộ nhớ khối liên tục, hiệu suất cao cho các Amazon EC2 instances thông qua Amazon Elastic Block Store (EBS). Các EBS volumes có thể được gắn vào EC2 instances và cung cấp bộ nhớ liên tục cần thiết cho hệ thống tệp, cơ sở dữ liệu và bất kỳ trường hợp sử dụng nào khác yêu cầu bộ nhớ liên tục.
+Amazon S3 (Simple Storage Service) cung cấp một cách đơn giản và tiết kiệm chi phí để lưu trữ các static websites. S3 static website hosting cho phép bạn phục vụ HTML, CSS, JavaScript và các nội dung tĩnh khác trực tiếp từ một S3 bucket mà không cần web servers hoặc hạ tầng phức tạp.
 
-Với Amazon EC2 Storage, người dùng có thể:
+Với Amazon S3 Static Website Hosting, người dùng có thể:
 
-- Tạo EBS volumes với các loại volume khác nhau được tối ưu hóa cho hiệu suất hoặc chi phí.
-- Tạo snapshots theo thời điểm của EBS volumes để sao lưu và khôi phục thảm họa.
-- Tạo Amazon Machine Images (AMI) để ghi lại toàn bộ cấu hình instance.
-- Khôi phục EC2 instances từ AMI để nhanh chóng triển khai các cấu hình giống hệt nhau.
-- Mã hóa EBS volumes và snapshots để tăng cường bảo mật.
-- Thay đổi kích thước volumes và thay đổi loại volume khi cần thiết.
+- Lưu trữ static websites với tính khả dụng cao và khả năng mở rộng.
+- Phục vụ nội dung toàn cầu với độ trễ thấp sử dụng tích hợp CloudFront.
+- Cấu hình tên miền tùy chỉnh sử dụng Route53.
+- Thiết lập các trang lỗi và chuyển hướng tùy chỉnh.
+- Hưởng lợi từ các tính năng bền vững và bảo mật của S3.
+- Chỉ trả tiền cho bộ nhớ và băng thông bạn sử dụng.
 
-Workshop này tập trung vào các tình huống quản lý bộ nhớ thực tế bao gồm tạo snapshots, xây dựng AMIs và khôi phục instances để chứng minh cách các giải pháp EC2 storage cung cấp khả năng lưu trữ dữ liệu và khôi phục cho các workloads đám mây.
+Workshop này tập trung vào các tình huống thực tế bao gồm tạo S3 buckets, cấu hình static website hosting, kiểm tra websites và thiết lập custom domains để chứng minh cách S3 cung cấp một giải pháp đơn giản và tiết kiệm chi phí cho việc lưu trữ static websites.
